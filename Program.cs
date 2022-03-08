@@ -14,6 +14,7 @@ namespace ProjectRefresh
             MergeSort qs = new MergeSort(array1);
             Console.WriteLine(qs.Print());
             //qs.Swap(2,3);
+
             //Console.WriteLine(qs.Print());
             qs.Run();
             //qs.Merge(0, 2, 3,3);
