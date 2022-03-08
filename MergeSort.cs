@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace ProjectRefresh
@@ -20,7 +21,11 @@ namespace ProjectRefresh
             //if (Count < 50 && start!=end) // for debugging infinite loop
             if (start != end)
             {
-                int mid = (int)Math.Ceiling((new int[] { start, end }).Average());
+                //int mid = (int)Math.Ceiling((new int[] { start, end }).Average());
+                //int mid = (int)Math.Ceiling((decimal)(start + end) / 2);
+                
+
+                int mid = (int) Math.Ceiling(Enumerable.Average(new List <int> { start,end}));
 
                 if (mid + 1 > end)
                     mid = end - 1;
