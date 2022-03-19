@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace ProjectRefresh
 {
@@ -77,6 +77,7 @@ namespace ProjectRefresh
             Fibonacci fi = new Fibonacci();
             Console.WriteLine($"{fi.getFibonacciNumber(5)} {fi.count}");
             Console.WriteLine($"{fi.getFibonacciNumberNonRecursive(5)} {fi.count}");
+            Console.WriteLine($"{fi.getFibonacciNumberNonRecursive2(5)} {fi.count}");
             Console.WriteLine($"{fi.getSmallestFibonacciNumberLargerThan(20)} {fi.idx}");
             Console.WriteLine($"{fi.getLargestFibonacciNumberSmallerThan(20)} {fi.idx}");
 

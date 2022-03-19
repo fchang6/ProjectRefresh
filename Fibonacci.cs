@@ -20,8 +20,10 @@ namespace ProjectRefresh
 
         public int getFibonacciNumberNonRecursive(int index)
         {
-            int a = 0;
-            int b = 1;
+            int a = 0;//n0
+            int b = 1;//n1
+            if (index < 2)
+                return index;
             for (int i = 0; i < (index/2); i++)
             {
                 a += b;
@@ -29,8 +31,30 @@ namespace ProjectRefresh
                 //Console.WriteLine($"{a} {b}");
                
             }
+            //todo: deal with boundary
             count = index+1;
             return b;
+
+        }
+        public int getFibonacciNumberNonRecursive2(int index)
+        {
+            int nMinus1 = 0;
+            int nMinus2 = 1;
+            int n = 0;
+            if (index < 2)
+                return index;
+
+            for (int i = 1; i <=index; i++)
+            {
+                n = nMinus1 + nMinus2;
+                nMinus2 = nMinus1;
+                nMinus1 = n;
+                
+                //Console.WriteLine($"{i} {nMinus1} {nMinus2} {r}");
+
+            }
+            
+            return n;
 
         }
         public int getSmallestFibonacciNumberLargerThan(int floor)
@@ -54,7 +78,7 @@ namespace ProjectRefresh
             {
                 r = getFibonacciNumber(idx);
                 idx++;
-                
+
             }
             idx -= 1;
             r = getFibonacciNumber(idx - 1);
